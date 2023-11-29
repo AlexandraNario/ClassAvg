@@ -1,6 +1,6 @@
 //to store an array of student data
 
-[{
+const students = [{
     id: 1,
     name: "Alice",
     address: "123 Main Street",
@@ -23,5 +23,7 @@
     name: "David",
     address: "321 Pine Street",
     averageGrade: 70,
-},]
+},];
+
+export {students};
 
