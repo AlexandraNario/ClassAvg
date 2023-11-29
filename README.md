@@ -1,1 +1,2 @@
 # ClassAvg
+INSTRUCTIONS ON HOW TO USE:
