@@ -8,5 +8,6 @@ function calculateClassroomAverage(studentData) {
     }
   
     return sum / studentData.length;
-  };
-  export {calculateClassroomAverage};
+  }
+  
+  export default calculateClassroomAverage;

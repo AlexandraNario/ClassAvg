@@ -3,7 +3,7 @@
 
 
 import { renderStudentTable, updateGrade } from "./studentTable.js";
-import { calculateClassroomAverage } from "./calculateClassroomAverage.js";
+import  calculateClassroomAverage  from "./calculateClassroomAverage.js";
 import { students } from "./studentData.js";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -20,3 +20,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+// Select the span element
+const classroomAverage = document.querySelector('#classroom-average');
+
+// Add an event listener to each input element
+const inputs = document.querySelectorAll('input');
+for (let i = 0; i < inputs.length; i++) {
+  inputs[i].addEventListener('input', () => {
+    // Call the updateGrade function
+    updateGrade(i);
+
+    // Recalculate the classroom average
+    const classroomAvg = calculateClassroomAverage(students);
+
+    // Update the classroom average display
+    classroomAverage.textContent = `Classroom Average: ${classroomAvg.toFixed(2)}`;
+  });
+}

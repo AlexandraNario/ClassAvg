@@ -1,10 +1,12 @@
 //creating and updating the student table
 //Import the student data from studentData.js
-import {students} from "./studentData.js";
+
 
 //create a function named renderStudentTable that takes two parameters:
 //*table (a reference to the HTML table where the data will be displayed).
 //*data (the student data from studentData.js).
+
+import {students} from "./studentData.js";
 function renderStudentTable(table, data) {
     for (let i = 0; i < data.length; i++) {
       const row = table.insertRow();
@@ -40,9 +42,9 @@ function renderStudentTable(table, data) {
       }
     }
   
-    const classroomAverage = calculateClassroomAverage(students);
+    
     const averageCell = document.getElementById("classroom-average");
-    averageCell.innerHTML = classroomAverage.toFixed(2);
+   
   };
 
   export { renderStudentTable, updateGrade }; 
